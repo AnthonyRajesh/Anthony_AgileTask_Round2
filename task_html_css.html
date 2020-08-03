@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	 <style>
+		.dot {
+		  margin-top:4px;
+		  margin-left:10%;
+		  height: 17px;
+		  width: 17px;
+		  background-color: #e62e00;
+		  border-radius: 50%;
+		  display: inline-block;
+		}
+		.banner{
+		margin-left:50%;
+		}
+		.header
+		{
+		color:white;
+		background-color:blue;
+		font-size:20px;
+		}
+		.dropdown1{
+		margin-left:7%;
+		}
+		.dropdown2
+		{
+		margin-left:25%;
+		}
+	</style>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <title>Sales Report</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+ </head>
+	<body>
+		<div class="header"><b>Menu<span class="dot"></span>User Name<text class="banner">Sales Report</text></b></div></br>
+		<div class="dropdown1">
+		<text class="droptext">Categories:</text>
+		<select name="chartType" id="categories" onchange="getDropDown(this.value)">
+			<option value="seloption">Select</option>
+			<option value="catg1">Catg1</option>
+			<option value="catg2">Catg2</option>
+			<option value="catg3">Catg3</option>
+			<option value="catg4">Catg4</option>
+		</select>
+		<text class="dropdown2" class="droptext">Products:</text>
+		<select name="chartType" id="products" onchange="getDropDown(this.value)">
+			<option value="seloption">Select</option>
+			<option id="op1" value="prod1">Prod1</option>
+			<option id="op2" value="prod2">Prod2</option>
+			<option id="op3" value="prod3">Prod3</option>
+			<option id="op4"value="prod4">Prod4</option>
+		</select>
+		<text class="dropdown2" class="droptext">Brand:</text>
+		<select name="chartType" id="brand" onchange="getDropDown(this.value)">
+			<option id="br1" value="brand1">Brand1</option>
+			<option id="br2" value="brand2">Brand2</option>
+			<option id="br3" value="brand3">Brand3</option>
+			<option id="br4" value="brand4">Brand4</option>
+		</select></div></br>
+
+        <div class="chart-container" style="position: relative; width:1270px;">
+            <canvas id="my_Chart"></canvas>
+        </div>
+	<script type="text/javascript" src="task_javascript.js"></script>
+	</body>
+</html>
